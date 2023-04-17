@@ -1,0 +1,87 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 100px;
+    border-top: 5px solid rgb(59, 59, 59);
+    padding-bottom: 80px;
+    margin: 0 50px;
+
+}
+
+
+@keyframes first {
+  0%  {left:0; top:0;}
+  25% {left:-15%; top:-25%; transform: rotate(10deg);}
+  50% {left:0; top:0; transform: rotate(0deg);}
+  100% {left:0; top:0;}
+}
+
+@keyframes last {
+  0%  {right:0; top:0;}
+  25% {right:-15%; top:-25%; transform: rotate(-10deg);}
+  50% {right:0; top:0; transform: rotate(0deg);}
+  100% {right:0; top:0; }
+}
+
+
+
+
+.item {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba (154,190,190,5);
+    background:radial-gradient(circle, rgba(156,156,156,1) 0%, rgba(74,74,74,2) 60%);
+    border: 1px solid rgb(72, 72, 72);
+    position: relative;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);;
+}
+
+
+
+.item:first-child {    
+    animation-name: first;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    
+}
+
+.item:last-child {
+    animation-name: last;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    
+}
+
+
+.item:before {
+    content: "";
+    position: absolute;
+    border: 1px solid rgb(59, 59, 59);
+    height: 500%;
+    top: -500%;
+    transform: translate(40px);
+    
+}
+
+
+
+
+
+
